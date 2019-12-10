@@ -1,0 +1,4 @@
+<select name="" id="x-select" [(ngModel)]='optionData' (ngModelChange)='optionChange($event)'>
+  <option *ngFor="let single of selData; let i = index;" [value]="i">{{single}}</option>
+</select>
+

@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "hht-hongye-x": {
+      "root": "projects/hht-hongye-x",
+      "sourceRoot": "projects/hht-hongye-x/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/hht-hongye-x/tsconfig.lib.json",
+            "project": "projects/hht-hongye-x/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/hht-hongye-x/src/test.ts",
+            "tsConfig": "projects/hht-hongye-x/tsconfig.spec.json",
+            "karmaConfig": "projects/hht-hongye-x/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/hht-hongye-x/tsconfig.lib.json",
+              "projects/hht-hongye-x/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "hht-hongye"
